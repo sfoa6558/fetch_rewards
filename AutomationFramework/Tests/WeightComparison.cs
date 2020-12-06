@@ -7,6 +7,7 @@ using AutomationFramework.Interactions;
 using System;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras;
+using System.IO;
 
 namespace AutomatedTestCases
 {
@@ -14,6 +15,7 @@ namespace AutomatedTestCases
   public class WeightComparison : AutomationCore
   {
 
+  
     [Test]
     public void FindEmptyBar()
     {
@@ -41,23 +43,29 @@ namespace AutomatedTestCases
 
     public void compareWeights(string[] leftBar, string[] rightBar, string[] bars)
     {
+    
       new Weigh().resetBars();
-      //string[] leftBar = { "3" };
-      //string[] rightBar = { "5" };
+      
       new Weigh().enterBars(leftBar, rightBar);
       Browser.getDriver.FindElement(Weigh.weigh).Click();
       var second_weigh_text = Browser.getDriver.FindElement(Weigh.secondWeighing).Text;
+      Browser.TakeScreenshot();
+     
       if (second_weigh_text.Contains("="))
       {
         Browser.getDriver.FindElement(By.Id("coin_" + bars[1])).Click();
+        Assert.AreEqual(Browser.SaveAlertText(), "Yay! You find it!");
+
       }
       if (second_weigh_text.Contains(">"))
       {
         Browser.getDriver.FindElement(By.Id("coin_" + bars[2])).Click();
+        Assert.AreEqual(Browser.SaveAlertText(), "Yay! You find it!");
       }
       if (second_weigh_text.Contains("<"))
       {
         Browser.getDriver.FindElement(By.Id("coin_" + bars[0])).Click();
+        Assert.AreEqual(Browser.SaveAlertText(), "Yay! You find it!");
       }
     }
 

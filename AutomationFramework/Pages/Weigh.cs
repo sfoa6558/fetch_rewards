@@ -31,11 +31,9 @@ namespace AutomationFramework.Pages
 
     public void resetBars()
     {
-      for (int i = 0; i < 3; i++)
-      {
-        Browser.getDriver.FindElement(By.Id("right_" + i.ToString())).SendKeys(Keys.Backspace);
-        Browser.getDriver.FindElement(By.Id("left_" + i.ToString())).SendKeys(Keys.Backspace);
-      }
+     var resets = Browser.getDriver.FindElements(By.Id("reset"));
+     resets[1].Click();
+      
     }
 
   }

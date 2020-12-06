@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
+﻿using NUnit.Framework;
+
 namespace AutomationFramework
 {
     
@@ -15,7 +9,7 @@ namespace AutomationFramework
         [TestFixture]
         public class AutomationCore
         {
-            IWebDriver driver;
+            
             
             // Our Core Test Automation class
             [SetUp]
