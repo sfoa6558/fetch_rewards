@@ -8,14 +8,14 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using System.Configuration;
-using AutomationFramework.Reports;
+
 
 namespace AutomationFramework
 {
     public class Browser
     {
         public static IWebDriver webDriver;
-        public static ReportsManager reports;
+       
         private static string baseURL = ConfigurationManager.AppSettings["url"];
         private static string browser = ConfigurationManager.AppSettings["browser"];
 
