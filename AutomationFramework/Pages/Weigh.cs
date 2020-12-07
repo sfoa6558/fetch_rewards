@@ -1,6 +1,4 @@
-﻿using AutomationFramework;
-using AutomationFramework.Test;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace AutomationFramework.Pages
 {
@@ -13,8 +11,9 @@ namespace AutomationFramework.Pages
     public static By weigh = By.Id("weigh");
     public static By firstWeighing = By.CssSelector("ol  > li:first-of-type");
     public static By secondWeighing = By.CssSelector("ol > li:nth-of-type(2)");
-   
-    public void enterBars(string[] left_bars, string[] right_bars)
+    
+    //Using two for loops, just case there is a different number of left or right bars
+    public void EnterBars(string[] left_bars, string[] right_bars)
     {
 
       for (int i = 0; i < left_bars.Length; i++)
@@ -29,7 +28,7 @@ namespace AutomationFramework.Pages
       }
     }
 
-    public void resetBars()
+    public void ResetBars()
     {
      var resets = Browser.getDriver.FindElements(By.Id("reset"));
      resets[1].Click();

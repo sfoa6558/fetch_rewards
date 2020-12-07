@@ -17,8 +17,8 @@ namespace AutomationFramework
   {
     public static IWebDriver webDriver;
 
-    private static string baseURL = ConfigurationManager.AppSettings["url"];
-    private static string browser = ConfigurationManager.AppSettings["browser"];
+    private static readonly string baseURL = ConfigurationManager.AppSettings["url"];
+    private static readonly string browser = ConfigurationManager.AppSettings["browser"];
 
     public static void Init()
     {
@@ -73,12 +73,6 @@ namespace AutomationFramework
 
     }
 
-
-    public Boolean isDialogPresent(IWebDriver driver)
-    {
-      IAlert alert = SeleniumExtras.WaitHelpers.ExpectedConditions.AlertIsPresent().Invoke(driver);
-      return (alert != null);
-    }
     public static void Goto(string url)
     {
       webDriver.Url = url;
