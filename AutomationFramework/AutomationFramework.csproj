@@ -61,7 +61,6 @@
   <ItemGroup>
     <Compile Include="AutomationCore.cs" />
     <Compile Include="Browser.cs" />
-    <Compile Include="Interactions\UiAction.cs" />
     <Compile Include="Pages\Weigh.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\WeightComparison.cs" />
