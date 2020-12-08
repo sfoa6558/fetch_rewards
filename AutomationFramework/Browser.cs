@@ -44,7 +44,7 @@ namespace AutomationFramework
     public static void TakeScreenshot()
     {
 
-      string path = "C:\\Screenshots";
+      string path = ConfigurationManager.AppSettings["screenshot"];
       var dateTimeString = DateTime.Now.ToString("yyyy-MM-dd-HH_mm_ss");
       Directory.CreateDirectory(path);
       Screenshot ss = ((ITakesScreenshot)getDriver).GetScreenshot();
@@ -55,7 +55,7 @@ namespace AutomationFramework
     public static string SaveAlertText()
     {
       IAlert alert = SeleniumExtras.WaitHelpers.ExpectedConditions.AlertIsPresent().Invoke(webDriver);
-      string path = "C:\\AlertText";
+      string path = ConfigurationManager.AppSettings["alertext"];
       var dateTimeString = DateTime.Now.ToString("yyyy-MM-dd-HH_mm_ss");
       Directory.CreateDirectory(path);
       using (StreamWriter sw = File.CreateText(path + "\\" + "PopUp" + "-" + dateTimeString + ".txt"))
