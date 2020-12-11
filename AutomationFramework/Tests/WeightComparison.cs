@@ -10,11 +10,11 @@ namespace AutomatedTestCases
   public class WeightComparison : AutomationCore
   {
 
-  
+
     [Test]
     public void FindEmptyBar()
     {
-      
+
       new Weigh().EnterBars(new string[] { "0", "1", "2" }, new string[] { "3", "4", "5" });
       Browser.getDriver.FindElement(Weigh.weigh).Click();
       var result = Browser.getDriver.FindElement(Weigh.reset).Text;
@@ -37,9 +37,9 @@ namespace AutomatedTestCases
 
     public void CompareWeights(string[] leftBar, string[] rightBar, string[] bars)
     {
-    
+
       new Weigh().ResetBars();
-      
+
       new Weigh().EnterBars(leftBar, rightBar);
       Browser.getDriver.FindElement(Weigh.weigh).Click();
       var result = Browser.getDriver.FindElement(Weigh.reset).Text;
@@ -49,19 +49,16 @@ namespace AutomatedTestCases
       {
         case "=":
           Browser.getDriver.FindElement(By.Id("coin_" + bars[1])).Click();
-          Assert.AreEqual(Browser.SaveAlertText(), "Yay! You find it!");
           break;
         case "<":
           Browser.getDriver.FindElement(By.Id("coin_" + bars[0])).Click();
-          Assert.AreEqual(Browser.SaveAlertText(), "Yay! You find it!");
           break;
         case ">":
           Browser.getDriver.FindElement(By.Id("coin_" + bars[2])).Click();
-          Assert.AreEqual(Browser.SaveAlertText(), "Yay! You find it!");
           break;
       }
 
-   
+      Assert.AreEqual(Browser.SaveAlertText(), "Yay! You find it!");
     }
 
   }
