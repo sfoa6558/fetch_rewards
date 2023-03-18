@@ -48,25 +48,11 @@ namespace AutomationFramework
       var dateTimeString = DateTime.Now.ToString("yyyy-MM-dd-HH_mm_ss");
       Directory.CreateDirectory(path);
       Screenshot ss = ((ITakesScreenshot)getDriver).GetScreenshot();
-      ss.SaveAsFile(path + "\\" + "Weighings" + "-" + dateTimeString + ".jpg", ScreenshotImageFormat.Png);
+      ss.SaveAsFile(path + "\\" + "Internet" + "-" + dateTimeString + ".jpg", ScreenshotImageFormat.Png);
 
     }
 
-    public static string SaveAlertText()
-    {
-      IAlert alert = SeleniumExtras.WaitHelpers.ExpectedConditions.AlertIsPresent().Invoke(webDriver);
-      string path = ConfigurationManager.AppSettings["alertext"];
-      var dateTimeString = DateTime.Now.ToString("yyyy-MM-dd-HH_mm_ss");
-      Directory.CreateDirectory(path);
-      using (StreamWriter sw = File.CreateText(path + "\\" + "PopUp" + "-" + dateTimeString + ".txt"))
-      {
-        sw.WriteLine(alert.Text);
-       
-      }
-
-      return alert.Text;
-
-    }
+   
 
     public static void Goto(string url)
     {

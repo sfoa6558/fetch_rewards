@@ -1,0 +1,41 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="AutomationFramework/AutomationCore.cs">
+    <Files>
+      <File FileName="AutomationFramework/AutomationCore.cs" Line="5" Column="1" />
+      <File FileName="AutomationFramework/Browser.cs" />
+      <File FileName="AutomationFramework/App.config" />
+      <File FileName="AutomationFramework/Pages/AddRemovePage.cs" />
+      <File FileName="AutomationFramework/packages.config" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AutomationFramework" expanded="True">
+            <Node name="AutomationFramework" expanded="True">
+              <Node name="Pages" expanded="True" />
+              <Node name="Tests" expanded="True" />
+              <Node name="AutomationCore.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="AutomationFramework" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.AutomationFramework PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/folaakinyemi/fetch_rewards/AutomationFramework/Browser.cs" relfile="AutomationFramework/Browser.cs" line="59" column="1" />
+      <Breakpoint file="/Users/folaakinyemi/fetch_rewards/AutomationFramework/Browser.cs" relfile="AutomationFramework/Browser.cs" line="33" column="1" />
+      <Breakpoint file="/Users/folaakinyemi/fetch_rewards/AutomationFramework/Browser.cs" relfile="AutomationFramework/Browser.cs" line="32" column="1" />
+      <Breakpoint file="/Users/folaakinyemi/fetch_rewards/AutomationFramework/Tests/Internet.cs" relfile="AutomationFramework/Tests/Internet.cs" line="20" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
